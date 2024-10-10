@@ -212,15 +212,15 @@ with tab1:
                      "In Nederland hebben we:")
             aantal, dichtheid, punten, ac, dc = st.columns(5)
             with aantal:
-                st.metric(value=f"{gemeenten["Aantal"].sum()}", label="Laadpalen")
+                st.metric(value=f"{gemeenten['Aantal'].sum()}", label="Laadpalen")
             with dichtheid:
-                st.metric(value=f"{(gemeenten["Aantal"].sum()/gemeenten["Inwonertal"].sum()*1000):.2f}", label="Laadpalen / 1000 inwoners")
+                st.metric(value=f"{(gemeenten['Aantal'].sum()/gemeenten["Inwonertal"].sum()*1000):.2f}", label="Laadpalen / 1000 inwoners")
             with punten:
-                st.metric(value=f"{laders_gemeente["Type"].count()}", label="Laadpunten")
+                st.metric(value=f"{laders_gemeente['Type'].count()}", label="Laadpunten")
             with ac:
-                st.metric(value=f"{laders_gemeente["Type"].value_counts().get('AC',0)}", label="Waarvan AC")
+                st.metric(value=f"{laders_gemeente['Type'].value_counts().get('AC',0)}", label="Waarvan AC")
             with dc:
-                st.metric(value=f"{laders_gemeente["Type"].value_counts().get('DC',0)}", label="Waarvan DC")
+                st.metric(value=f"{laders_gemeente['Type'].value_counts().get('DC',0)}", label="Waarvan DC")
             st.subheader("Gemeentelijke statistieken")
             gemeente_names = sorted(gemeenten['name'].unique())
             selected_gemeente = st.selectbox("Selecteer een Gemeente", gemeente_names)
