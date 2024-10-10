@@ -214,7 +214,7 @@ with tab1:
             with aantal:
                 st.metric(value=f"{gemeenten['Aantal'].sum()}", label="Laadpalen")
             with dichtheid:
-                st.metric(value=f"{(gemeenten['Aantal'].sum()/gemeenten["Inwonertal"].sum()*1000):.2f}", label="Laadpalen / 1000 inwoners")
+                st.metric(value=f"{(gemeenten['Aantal'].sum()/gemeenten['Inwonertal'].sum()*1000):.2f}", label="Laadpalen / 1000 inwoners")
             with punten:
                 st.metric(value=f"{laders_gemeente['Type'].count()}", label="Laadpunten")
             with ac:
