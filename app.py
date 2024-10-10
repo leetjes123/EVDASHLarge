@@ -6,11 +6,9 @@ import plotly.graph_objects as go
 import streamlit as st
 from streamlit_folium import folium_static
 import requests as r
-import seaborn as sns
 from pprint import pprint
 import json
 import folium
-import matplotlib.pyplot as plt
 from scipy import stats
 import calendar
 
