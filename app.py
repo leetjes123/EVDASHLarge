@@ -136,6 +136,7 @@ def create_map(use_log_scale, density_type, df):
         columns=['name', color_column],
         key_on='feature.properties.name',
         fill_color='YlOrRd',
+        nan_fill_color='white',
         fill_opacity=0.7,
         line_opacity=0.2,
         legend_name=legend_name,
